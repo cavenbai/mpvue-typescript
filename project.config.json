@@ -9,7 +9,7 @@
 	},
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "touristappid",
+	"appid": "wxa4f26e60126d5d35",
 	"projectname": "mpvue-typescript-weapp",
 	"condition": {
 		"search": {

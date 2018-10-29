@@ -12,6 +12,7 @@
     </i-panel>
 
     <i-button type="primary" @click="onClick">前往page2</i-button>
+    <i-button type="primary" @click="twoClick">测试接口</i-button>
 
     <div class="content">
       当前用户名:{{userInfo.nickName}}
@@ -23,6 +24,8 @@
 import { Component, Vue } from "vue-property-decorator";
 import Card from "@/components/card.vue"; // mpvue目前只支持的单文件组件
 import { State, Mutation } from "vuex-class";
+import { Inject,Dependencies } from "@/core/decorator";
+import { BackLogService } from '@/services/manage-service/back-log.service'
 
 @Component({
   components: {
@@ -30,6 +33,7 @@ import { State, Mutation } from "vuex-class";
   }
 })
 export default class Page1 extends Vue {
+  @Dependencies(BackLogService) private backLogService: BackLogService
   private username = "admin";
   private password = "admin";
 
@@ -49,6 +53,25 @@ export default class Page1 extends Vue {
 
   mounted() {
     this.getUserInfo();
+  }
+  twoClick(){
+    console.log(BackLogService,1121)
+    // wx.request({
+    //   url: 'http://192.168.3.82:8762/service-manage/homeInfoController/getOrderRankingList?startTime=2018-10-29&timeType=2&org=10473&sortType=1',
+    //   header: {
+    //     'content-type': 'application/json', // 默认值
+    //     'authorization': '1_259db1c03fea4aef90e4c1670f0b6936'
+    //   },
+    //   success (res) {
+    //     console.log(res.data)
+    //   }
+    // })
+    // this.backLogService.roleAllocateBacklogs({name:'baipengfei'})
+    //   .subscribe((data)=>{
+    //     console.log(data)
+    //   },({msg}) =>{
+    //     // this.$Message.error(msg)
+    //   })
   }
 
   getUserInfo() {

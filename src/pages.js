@@ -22,7 +22,7 @@ module.exports = mergeConfig([
   {
     path: 'pages/page3.vue',
     config: {
-      navigationBarTitleText: 'page3'
+      navigationBarTitleText: '页面3'
     }
   },
   {
@@ -33,7 +33,13 @@ module.exports = mergeConfig([
 
       // ])
     }
-  }
+  },
+    {
+      path: 'pages/model.vue',
+      config: {
+        navigationBarTitleText: 'model'
+      }
+    },
 ],
   // 全局组件
   resolveComponent([

@@ -12,7 +12,10 @@
   "dependencies": {
     "mpvue": "^1.0.11",
     "mpvue-router-patch": "^0.2.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.10",
     "vue": "^2.5.17",
+    "vue-inject": "^2.1.1",
     "vue-property-decorator": "^7.0.0",
     "vuex": "^3.0.1",
     "vuex-class": "^0.3.1"
@@ -40,7 +43,9 @@
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.18.0",
     "import-weapp-component": "^4.7.1",
-    "mpvue-entry": "^1.5.2",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mpvue-entry": "1.5.3",
     "mpvue-loader": "^1.1.2",
     "mpvue-template-compiler": "^1.0.11",
     "mpvue-webpack-target": "^1.0.0",
